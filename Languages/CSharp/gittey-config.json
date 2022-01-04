@@ -1,0 +1,40 @@
+{
+    "branchPrefix": {
+        "separator": "",
+        "validator": "",
+        "prefixes": {}
+    },
+    "commitPrefix": {
+        "separator": " ",
+        "validator": "^.{1,45}$",
+        "prefixes": {}
+    },
+    "verboseMode": false,
+    "aliases": [
+        {
+            "name": "test",
+            "command": "cls && dotnet test && gittey commit",
+            "description": "runs tests and commits if the tests succeed"
+        },
+        {
+            "name": "undo",
+            "command": "cls && git checkout . && git clean -f",
+            "description": "sets project state to that of the last committed state"
+        },
+        {
+            "name": "shrink",
+            "command": "npx rimrafx **/bin; npx rimrafx **/obj; npx rimrafx **/TestResults"
+        },
+        {
+            "name": "docs",
+            "command": "cls && booklisp ./documentation/main.md ./readme.md",
+            "description": "sets project state to that of the last committed state"
+        },
+        {
+            "name": "setup",
+            "command": "cls",
+            "description": "sets the project up to be run"
+        }
+    ],
+    "collaborators": []
+}

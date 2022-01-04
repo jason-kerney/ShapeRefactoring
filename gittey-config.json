@@ -1,0 +1,41 @@
+{
+    "branchPrefix": {
+        "separator": "",
+        "validator": "",
+        "prefixes": {}
+    },
+    "commitPrefix": {
+        "separator": " ",
+        "validator": "^.{1,45}$",
+        "prefixes": {}
+    },
+    "verboseMode": false,
+    "aliases": [
+        {
+            "name": "docsMain",
+            "command": "booklisp ./documentation/readme/main.md ./readme.md && booklisp ./documentation/contrib/main.md ./contributing.md",
+            "description": "generates the main documentation"
+        },
+        {
+            "name": "docsJSOO",
+            "command": "booklisp ./Languages/JavaScriptOO/documentation/main.md ./Languages/JavaScriptOO/readme.md",
+            "description": "generates the documentation for the JS OO exercise"
+        },
+        {
+            "name": "docsCS",
+            "command": "booklisp ./Languages/CSharp/documentation/main.md ./Languages/CSharp/readme.md",
+            "description": "generates the documentation for the C# exercise"
+        },
+        {
+            "name": "docs",
+            "command": "cls; gittey docsMain; gittey docsJSOO; gittey docsCS",
+            "description": "generates all the documentations"
+        },
+        {
+            "name": "contrib",
+            "command": "cls && npx all-contributors && gittey docs",
+            "description": "sets project state to that of the last committed state"
+        }
+    ],
+    "collaborators": []
+}
