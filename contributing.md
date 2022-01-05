@@ -55,7 +55,7 @@ With any language there are a **_LOT_** of ways to make ugly code. That does not
 
 The logic I used to decide if a destructuring was going to occur was:
 
-> If the I have seen the thought process that would lead to someone typing this code in production then it is okay.
+> If I have seen the thought process that would lead to someone typing this code in production then it is okay.
 
 **Example:** In C# I have seen people assign things to lambdas that would be better done as a method. There for destructuring a method to a lambda is okay, even when it makes things really complex and duplicated.
 
