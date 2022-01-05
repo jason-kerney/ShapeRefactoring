@@ -27,8 +27,13 @@
             "description": "generates the documentation for the C# exercise"
         },
         {
+            "name": "docsTests",
+            "command": "booklisp ./documentation/tests/main.md ./test_cases.md",
+            "description": "generates the documentation for the C# exercise"
+        },
+        {
             "name": "docs",
-            "command": "cls; gittey docsMain; gittey docsJSOO; gittey docsCS",
+            "command": "cls; gittey docsMain; gittey docsTests; gittey docsJSOO; gittey docsCS",
             "description": "generates all the documentations"
         },
         {
