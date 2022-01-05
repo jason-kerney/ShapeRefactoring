@@ -2,9 +2,6 @@ import { classify } from '@/Classification'
 import { build } from '@/TypeConstructors'
 import { expect } from 'chai'
 import { it } from 'mocha'
-//import { configure } from "./utils/approvals"
-
-//const approvals = configure()
 
 function getShape(...coords: [number, number][]): [any[], any] {
     var points = build(...coords)

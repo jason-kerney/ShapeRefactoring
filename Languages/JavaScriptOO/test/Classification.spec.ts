@@ -2,9 +2,6 @@ import { classify } from '@/Classification'
 import { build } from '@/TypeConstructors'
 import { expect } from 'chai'
 import { it } from 'mocha'
-//import { configure } from "./utils/approvals"
-
-//const approvals = configure()
 
 describe('classify', () => {
     describe('basic shapes', () => {
