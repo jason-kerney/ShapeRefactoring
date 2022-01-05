@@ -91,13 +91,13 @@ This will verify that the line segment returned from the classification process 
 
 This will verify that a line segment will have access to the correct length based on the points that were given.
 
-> Note: Length is determined by the absolute value of the following formula: `√((x₁ - x₂)² + (y₁ - y₂)²)`
+> Note: Length is determined by the absolute value of the following formula: ```√((x₁ - x₂)² + (y₁ - y₂)²)```
 
 ### A Line Segment should contain its slope
 
 This will verify that a line segment will have access to the correct slope based on the points that were given.
 
-> Note: The slope is determined by the following formula: `(y₂ - y₁)/(x₂ - x₁)`
+> Note: The slope is determined by the following formula: ```(y₂ - y₁)/(x₂ - x₁)```
 
 ### A Line Segment should have a slope of "Undefined" if both points are on the same x value
 
@@ -130,9 +130,31 @@ This will verify that the Triangle will have the expected angles such that:
 1. All angles add up to 180 degrees.
 1. The degrees of each angle is correctly calculated.
 
+> Note: The angle in degrees can be calculated using the following formula:
+
+```console
+A = length of Side A
+B = length of Side B
+C = length of Side C
+
+∠A = ((B² + C² - A²) / (2BC))(180/π)
+∠B = ((A² + C² - B²) / (2AC))(180/π)
+∠C = ((A² + B² - C²) / (2AB))(180/π)
+```
+
 ### A Triangle should have the correct area
 
 This will verify that a Triangle will have access to its area which is correctly calculated.
+
+> Note: The area of a triangle can be calculated using Heron's Formula. (Thanks to [omnicalculator](https://www.omnicalculator.com/math/triangle-area)).
+
+```console
+A = length of Side A
+B = length of Side B
+C = length of Side C
+
+area = ¼√((A + B + C)(-A + B + C)(A - B + C)(A + B - C))
+```
 
 ### A Triangle should have the correct perimeter
 

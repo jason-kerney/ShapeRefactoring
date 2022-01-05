@@ -27,9 +27,31 @@ This will verify that the Triangle will have the expected angles such that:
 1. All angles add up to 180 degrees.
 1. The degrees of each angle is correctly calculated.
 
+> Note: The angle in degrees can be calculated using the following formula:
+
+```console
+A = length of Side A
+B = length of Side B
+C = length of Side C
+
+∠A = ((B² + C² - A²) / (2BC))(180/π)
+∠B = ((A² + C² - B²) / (2AC))(180/π)
+∠C = ((A² + B² - C²) / (2AB))(180/π)
+```
+
 ### A Triangle should have the correct area
 
 This will verify that a Triangle will have access to its area which is correctly calculated.
+
+> Note: The area of a triangle can be calculated using Heron's Formula. (Thanks to [omnicalculator](https://www.omnicalculator.com/math/triangle-area)).
+
+```console
+A = length of Side A
+B = length of Side B
+C = length of Side C
+
+area = ¼√((A + B + C)(-A + B + C)(A - B + C)(A + B - C))
+```
 
 ### A Triangle should have the correct perimeter
 
