@@ -83,13 +83,15 @@ This will verify that if given a shape where the adjoining legs do not form righ
 
 > Note: A line segment should only be constructable from the "Classify" method/function. The test cases should not be able to construct it directly.
 
-### A Line Segment should contain the points that constructed it.
+### A Line Segment should contain the points that constructed it
 
 This will verify that the line segment returned from the classification process gives access to the points that define it.
 
 ### A Line Segment should contain its length
 
 This will verify that a line segment will have access to the correct length based on the points that were given.
+
+> Note: Length is determined by the absolute value of the following formula: `√((x₁ - x₂)² + (y₁ - y₂)²)`
 
 ### A Line Segment should contain its slope
 
