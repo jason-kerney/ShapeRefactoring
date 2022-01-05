@@ -7,5 +7,6 @@
     (section-main "./intro.md")
     (section-main "./setup.md")
     (section-main "./run.md")
+    (section-main "./new.md")
 )
 /bl-->
