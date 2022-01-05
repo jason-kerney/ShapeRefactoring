@@ -10,6 +10,7 @@
 - [Section 3: What is a Line Segment](#user-content-what-is-a-line-segment)
 - [Section 4: What is a Triangle](#user-content-what-is-a-triangle)
 - [Section 5: What is a Rectangle](#user-content-what-is-a-rectangle)
+- [Section 6: What is the Other shape](#user-content-what-is-the-other-shape)
 
 ## Introduction ##
 
@@ -188,6 +189,31 @@ This will verify that the rectangle will grant access to its area and its area i
 ### A Rectangle should contain its perimeter
 
 This will verify that the rectangle will grant access to its perimeter and its perimeter is the same as the sum of its side lengths.
+    
+
+## What is the Other shape ##
+
+> Note: The other shape should only be constructable from the "Classify" method/function. The test cases should not be able to construct it directly.
+
+### Other should contain the points that constructed it
+
+This will verify that the Other shape returned from the classification process contains all points used by the classification process in classifying it as other.
+
+### Other should know a closed shape is not an open one
+
+This will verify that the Other shape will grant access to knowing if the shape is closed or open such that:
+
+1. A closed shape is one where the first and last point are in the same location.
+
+### Other should know an open shape is not a closed one
+
+This will verify that the Other shape will grant access to knowing if the shape is open or closed such that:
+
+1. A closed shape is one where the first and last point are in the same location.
+
+### Other should have a length
+
+This will verify that the Other shape will grant access to its length and its length will be the sum of all lines segments constructed from its points.
     
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
