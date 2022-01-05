@@ -184,7 +184,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## How to contribute ##
 
-The guide to how to contribute is here: [How To Contribute](.\contributing.md).
+The guide to how to contribute is here: [How To Contribute](./contributing.md).
     
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
