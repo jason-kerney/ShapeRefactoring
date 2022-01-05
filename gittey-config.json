@@ -33,7 +33,7 @@
         },
         {
             "name": "docs",
-            "command": "cls; gittey docsMain; gittey docsTests; gittey docsJSOO; gittey docsCS",
+            "command": "gittey docsMain; gittey docsTests; gittey docsJSOO; gittey docsCS",
             "description": "generates all the documentations"
         },
         {
