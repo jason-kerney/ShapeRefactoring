@@ -111,11 +111,11 @@ This will verify that a line that is straight on the x value will have an undefi
 
 ### A Triangle should contain the points that constructed it
 
-This will verify that a triangle returned from the classification process will have access to the first three distinct points that were given to the process.
+This will verify that a triangle returned from the classification process will grant access to the first three distinct points that were given to the process.
 
 ### A Triangle should have three legs which are line segments constructed from the points
 
-This will verify that the Triangle will have access to three line segments forming its sides. The Sides will have the names:
+This will verify that the Triangle will grant access to three line segments forming its sides. The Sides will have the names:
 
 - Side A
 - Side B
@@ -145,7 +145,7 @@ C = length of Side C
 
 ### A Triangle should have the correct area
 
-This will verify that a Triangle will have access to its area which is correctly calculated.
+This will verify that a Triangle will grant access to its area which is correctly calculated.
 
 > Note: The area of a triangle can be calculated using Heron's Formula. (Thanks to [omnicalculator](https://www.omnicalculator.com/math/triangle-area)).
 
@@ -159,7 +159,7 @@ area = ¼√((A + B + C)(-A + B + C)(A - B + C)(A + B - C))
 
 ### A Triangle should have the correct perimeter
 
-This will verify that the Triangle will have access to its perimeter which will be equal to the sum of its three side lengths.
+This will verify that the Triangle will grant access to its perimeter which will be equal to the sum of its three side lengths.
     
 
 ## What is a Rectangle ##
@@ -168,11 +168,11 @@ This will verify that the Triangle will have access to its perimeter which will 
 
 ### A Rectangle should contain the points that constructed it
 
-This will verify that the Rectangle returned from the classification process will have access the distinct points form the collection used by the classification process.
+This will verify that the Rectangle returned from the classification process will grant access to the distinct points form the collection used by the classification process.
 
 ### A Rectangle should contain its sides
 
-This will verify that a Rectangle will have access to the four line segments that form its sides. Such that:
+This will verify that a Rectangle will grant access to the four line segments that form its sides. Such that:
 
 1. Side A - First line segment formed from the first two points provided.
 1. Side B - Second line segment formed from the second and third points provided.
@@ -181,13 +181,13 @@ This will verify that a Rectangle will have access to the four line segments tha
 
 ### A Rectangle should contain its area
 
-This will verify that the rectangle has access to its area and its area is calculated correctly.
+This will verify that the rectangle will grant access to its area and its area is calculated correctly.
 
 > Note: the area of a Rectangle can be calculated using this formula: ```(hight)(width)```
 
 ### A Rectangle should contain its perimeter
 
-This will verify that the rectangle has access to its perimeter and its perimeter is the same as the sum of its side lengths.
+This will verify that the rectangle will grant access to its perimeter and its perimeter is the same as the sum of its side lengths.
     
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
