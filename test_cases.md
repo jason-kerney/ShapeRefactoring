@@ -7,6 +7,7 @@
 
 - [Section 1: Introduction](#user-content-introduction)
 - [Section 2: How to classify](#user-content-how-to-classify)
+- [Section 3: What is a Line Segment](#user-content-what-is-a-line-segment)
 
 ## Introduction ##
 
@@ -75,6 +76,27 @@ This test will verify that if give a closed shape with five points, but the firs
 ### Classify should classify five points that form a closed shape, but do not form right angles as 'Other'
 
 This will verify that if given a shape where the adjoining legs do not form right angle even when it is a closed shape of five points that the special case shape "Other" is returned.
+    
+
+## What is a Line Segment ##
+
+> Note: A line segment should only be constructable from the "Classify" method/function. The test cases should not be able to construct it directly.
+
+### A Line Segment should contain the points that constructed it.
+
+This will verify that the line segment returned from the classification process gives access to the points that define it.
+
+### A Line Segment should contain its length
+
+This will verify that a line segment will have access to the correct length based on the points that were given.
+
+### A Line Segment should contain its slope
+
+This will verify that a line segment will have access to the correct slope based on the points that were given.
+
+### A Line Segment should have a slope of "Undefined" if both points are on the same x value
+
+This will verify that a line that is straight on the x value will have an undefined slope.
     
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->

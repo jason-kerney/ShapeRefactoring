@@ -77,7 +77,7 @@ describe('Line Segment', () => {
         expect(result.slope).to.be.closeTo(0, 0.001)
     })
 
-    it('should have a slop of One when x and y change by the same amount', () => {
+    it('should have a slope of One when x and y change by the same amount', () => {
         const change = 4
         const x = 1
         const y = 4
@@ -100,7 +100,7 @@ describe('Line Segment', () => {
         expect(result.slope).to.be.closeTo(-4, 0.001)
     })
 
-    it('should not have a slop if both points have an x of 3', () => {
+    it('should not have a slope if both points have an x of 3', () => {
         const x = 3
         const points = build(
             [x, 0],
@@ -111,7 +111,7 @@ describe('Line Segment', () => {
         expect(result.slope).to.equal('Undefined')
     })
 
-    it('should not have a slop if both points have an x of -51', () => {
+    it('should not have a slope if both points have an x of -51', () => {
         const x = 51
         const points = build(
             [x, 0],
