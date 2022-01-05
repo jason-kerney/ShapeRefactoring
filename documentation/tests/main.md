@@ -8,5 +8,6 @@
     (section-main "./classification.md")
     (section-main "./line_segment.md")
     (section-main "./triangle.md")
+    (section-main "./rectangle.md")
 )
 /bl-->
