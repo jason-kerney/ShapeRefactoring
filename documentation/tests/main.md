@@ -5,5 +5,6 @@
 
 (table-of-contents
     (section-main "./intro.md")
+    (section-main "./classification.md")
 )
 /bl-->
