@@ -1,13 +1,15 @@
 <!--bl
 (filemeta
-    (title "Adding a language"))
+    (title "Adding an Exercise"))
 /bl-->
 
 ### A Note
 
-Remembering the intent with adding languages, I ask that you do not look at any of the current solutions. I do not want the exercise for every language to look like every other language.
+Remembering the intent with adding an Exercise, I ask that you do not look at any of the current solutions. I do not want the exercise for every language to look like every other language.
 
 Instead the goal is to use the best aspects of your language to recreate the desired behavior but having the solution be a language native solutions.
+
+You can also read this full [guide](./new_exercises.md)
 
 ### Focus on Tests
 

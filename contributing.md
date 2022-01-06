@@ -7,7 +7,7 @@
 
 - [Section 1: Intention of Design](#user-content-intention-of-design)
 - [Section 2: The Basics](#user-content-the-basics)
-- [Section 3: Adding a language](#user-content-adding-a-language)
+- [Section 3: Adding an Exercise](#user-content-adding-an-exercise)
 - [Section 4: Optimizations and Bug Fixes](#user-content-optimizations-and-bug-fixes)
 
 ## Intention of Design ##
@@ -25,13 +25,15 @@ This guide will walk you through how to contribute so that those two intents are
 The biggest ask I have is that any code added is well tested. I would suggest that you do it Test Driven, but do not require it.
     
 
-## Adding a language ##
+## Adding an Exercise ##
 
 ### A Note
 
-Remembering the intent with adding languages, I ask that you do not look at any of the current solutions. I do not want the exercise for every language to look like every other language.
+Remembering the intent with adding an Exercise, I ask that you do not look at any of the current solutions. I do not want the exercise for every language to look like every other language.
 
 Instead the goal is to use the best aspects of your language to recreate the desired behavior but having the solution be a language native solutions.
+
+You can also read this full [guide](./new_exercises.md)
 
 ### Focus on Tests
 
