@@ -17,6 +17,15 @@
             "description": "generates the main documentation"
         },
         {
+            "name": "docsTests",
+            "command": "booklisp ./documentation/tests/main.md ./test_cases.md",
+            "description": "generates the documentation for the C# exercise"
+        },
+        {
+            "name": "docsNew",
+            "command": "booklisp ./documentation/newlang/main.md ./new_exercises.md"
+        },
+        {
             "name": "docsJSOO",
             "command": "booklisp ./Languages/JavaScriptOO/documentation/main.md ./Languages/JavaScriptOO/readme.md",
             "description": "generates the documentation for the JS OO exercise"
@@ -27,13 +36,8 @@
             "description": "generates the documentation for the C# exercise"
         },
         {
-            "name": "docsTests",
-            "command": "booklisp ./documentation/tests/main.md ./test_cases.md",
-            "description": "generates the documentation for the C# exercise"
-        },
-        {
             "name": "docs",
-            "command": "gittey docsMain; gittey docsTests; gittey docsJSOO; gittey docsCS",
+            "command": "gittey docsMain; gittey docsTests; gittey docsNew; gittey docsJSOO; gittey docsCS",
             "description": "generates all the documentations"
         },
         {
