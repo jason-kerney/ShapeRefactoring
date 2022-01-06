@@ -178,8 +178,6 @@ The guide to how to contribute is here: [How To Contribute](./contributing.md).
 
 ## A Note on Tooling ##
 
-# b
-
 When developing this exercise I used two tools I want to call out. The first is ```Gittey```.
 
 **[Gittey](https://www.npmjs.com/package/gittey)** is a free command automation that has understanding of git. It is used to help automate workflows. I have also used it to ensure a common feel between exercises of different languages.
