@@ -32,7 +32,7 @@
         },
         {
             "name": "setup",
-            "command": "cls",
+            "command": "cls; dotnet build",
             "description": "sets the project up to be run"
         }
     ],

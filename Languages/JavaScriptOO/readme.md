@@ -6,15 +6,21 @@
 ## Table Of Contents ##
 
 - [Section 1: Introduction](#user-content-introduction)
-- [Section 2: Setup](#user-content-setup)
-- [Section 3: Run the tests](#user-content-run-the-tests)
-- [Section 4: Changes that need to be made](#user-content-changes-that-need-to-be-made)
+- [Section 2: Requirements](#user-content-requirements)
+- [Section 3: Setup](#user-content-setup)
+- [Section 4: Run the tests](#user-content-run-the-tests)
+- [Section 5: Changes that need to be made](#user-content-changes-that-need-to-be-made)
 
 ## Introduction ##
 
 This is a different kind of refactoring exercise. Most code exercises have a specific answer and are designed to be solved within a couple of hours. This one is intended to have a large number of solutions and take more then 10 hours without completion.
 
 The idea is to be an exercise that you can continuously go back to and see new things. This is not intended for someone who is new to "_test based refactoring_" but for those who are familiar with the process and want to stay sharp or want to dive deeper.
+    
+
+## Requirements ##
+
+To use this exercise you need to have the [node](https://nodejs.org/en/download/) installed.
     
 
 ## Setup ##
