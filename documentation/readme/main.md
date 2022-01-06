@@ -13,5 +13,6 @@
     (section-main "./new.md")
     (section-main "./contrib.md")
     (section-main "./contributing.md")
+    (section-main "./tooling.md")
 )
 /bl-->
