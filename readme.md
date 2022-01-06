@@ -51,13 +51,13 @@ In the directory for the exercise run:
 It is suggested that you:
 
 1. Clone this repository
-1. Delete the git repo
+1. Delete the ```.git``` directory
 1. Delete all the languages you are not planning to work in
 1. Set up the directory for your language according to the readme
-   1. Run: `gittey setup`
-1. run a `git init` in that directory
+   1. Run: ```gittey setup```
+1. run a ```git init``` in that directory
 1. Run the tests
-   1. `gittey test`
+   1. ```gittey test```
 1. start working
 
     
@@ -165,18 +165,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
