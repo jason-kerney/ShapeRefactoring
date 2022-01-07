@@ -27,7 +27,7 @@
         },
         {
             "name": "docsJSOO",
-            "command": "booklisp ./Languages/JavaScriptOO/documentation/main.md ./Languages/JavaScriptOO/readme.md",
+            "command": "booklisp ./Languages/TypeScript/documentation/main.md ./Languages/TypeScript/readme.md",
             "description": "generates the documentation for the JS OO exercise"
         },
         {
