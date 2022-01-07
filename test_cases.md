@@ -139,9 +139,9 @@ A = length of Side A
 B = length of Side B
 C = length of Side C
 
-∠A = ((B² + C² - A²) / (2BC))(180/π)
-∠B = ((A² + C² - B²) / (2AC))(180/π)
-∠C = ((A² + B² - C²) / (2AB))(180/π)
+∠A = ACOS((B² + C² - A²) / (2BC))(180/π)
+∠B = ACOS((A² + C² - B²) / (2AC))(180/π)
+∠C = ACOS((A² + B² - C²) / (2AB))(180/π)
 ```
 
 ### A Triangle should have the correct area
