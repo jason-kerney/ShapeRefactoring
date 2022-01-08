@@ -13,7 +13,7 @@
     "aliases": [
         {
             "name": "test",
-            "command": "cls && dotnet test && gittey commit",
+            "command": "cls && dotnet test --collect:\"XPlat Code Coverage\" && gittey commit",
             "description": "runs tests and commits if the tests succeed"
         },
         {
@@ -23,7 +23,7 @@
         },
         {
             "name": "shrink",
-            "command": "npx rimrafx **/bin; npx rimrafx **/obj; npx rimrafx **/TestResults"
+            "command": "npx rimrafx **/bin; npx rimrafx **/obj; npx rimrafx **/TestResults; npx rimrafx **/coveragereport"
         },
         {
             "name": "docs",
@@ -32,7 +32,7 @@
         },
         {
             "name": "setup",
-            "command": "cls; dotnet build",
+            "command": "cls;dotnet build",
             "description": "sets the project up to be run"
         }
     ],
