@@ -44,6 +44,11 @@
             "name": "contrib",
             "command": "cls && npx all-contributors && gittey docs",
             "description": "sets project state to that of the last committed state"
+        },
+        {
+            "name": "undo",
+            "command": "cls && git checkout . && git clean -f",
+            "description": "sets project state to that of the last committed state"
         }
     ],
     "collaborators": []
