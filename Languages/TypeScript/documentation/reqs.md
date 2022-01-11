@@ -3,4 +3,8 @@
     (title "Requirements"))
 /bl-->
 
-To use this exercise you need to have the [node](https://nodejs.org/en/download/) installed.
+To use this exercise you need the following installed:
+
+- [node](https://nodejs.org/en/download/)
+- [Gittey](https://www.npmjs.com/package/gittey) globally installed
+  - `npm i gittey -g`

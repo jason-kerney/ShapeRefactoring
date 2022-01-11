@@ -20,7 +20,11 @@ The idea is to be an exercise that you can continuously go back to and see new t
 
 ## Requirements ##
 
-To use this exercise you need to have the [node](https://nodejs.org/en/download/) installed.
+To use this exercise you need the following installed:
+
+- [node](https://nodejs.org/en/download/)
+- [Gittey](https://www.npmjs.com/package/gittey) globally installed
+  - `npm i gittey -g`
     
 
 ## Setup ##
@@ -39,6 +43,8 @@ Run:
     
 
 ## Run the tests ##
+
+To run the tests you must first have the requirements installed.
 
 `gittey test`
 
