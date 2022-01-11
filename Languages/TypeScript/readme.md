@@ -52,7 +52,7 @@ To run the tests you must first have the requirements installed.
 
 This will run the tests. If the tests pass it will then prompt to commit files that changed.
 
-### Explore Code
+### Explore code
 
 `gittey check`
 
@@ -60,9 +60,13 @@ This will run the tests. If the tests pass it will then prompt to commit files t
 
 This will run the tests but without trying to commit.
 
-### Commit Code regardless of test passing
+### Commit code regardless of test passing
 
 `gittey commit`
+
+### Get rid of Current changes
+
+`gittey undo`
     
 
 ## Changes that need to be made ##
