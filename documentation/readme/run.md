@@ -3,18 +3,4 @@
     (title "Run the tests"))
 /bl-->
 
-`gittey test`
-
-This will run the tests. If the tests pass it will then prompt to commit files that changed.
-
-### Explore Code
-
-`gittey check`
-
-> Try not to use this one.
-
-This will run the tests but without trying to commit.
-
-### Commit Code regardless of test passing
-
-`gittey commit`
+Thanks to Gittey running the tests looks the same. However please look at the language specific read me for how to run the tests.

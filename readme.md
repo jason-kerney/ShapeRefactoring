@@ -7,14 +7,15 @@
 
 - [Section 1: Note on Refactoring](#user-content-note-on-refactoring)
 - [Section 2: Introduction](#user-content-introduction)
-- [Section 3: Definitions](#user-content-definitions)
-- [Section 4: Setup](#user-content-setup)
-- [Section 5: Run the tests](#user-content-run-the-tests)
-- [Section 6: Purpose of Code](#user-content-purpose-of-code)
-- [Section 7: Changes that need to be made](#user-content-changes-that-need-to-be-made)
-- [Section 8: Contributors ✨](#user-content-contributors-✨)
-- [Section 9: How to contribute](#user-content-how-to-contribute)
-- [Section 10: A Note on Tooling](#user-content-a-note-on-tooling)
+- [Section 3: Requirements](#user-content-requirements)
+- [Section 4: Definitions](#user-content-definitions)
+- [Section 5: Setup](#user-content-setup)
+- [Section 6: Run the tests](#user-content-run-the-tests)
+- [Section 7: Purpose of Code](#user-content-purpose-of-code)
+- [Section 8: Changes that need to be made](#user-content-changes-that-need-to-be-made)
+- [Section 9: Contributors ✨](#user-content-contributors-✨)
+- [Section 10: How to contribute](#user-content-how-to-contribute)
+- [Section 11: A Note on Tooling](#user-content-a-note-on-tooling)
 
 ## Note on Refactoring ##
 
@@ -26,6 +27,11 @@ _If_ you have to change a test to make a change work, you are not refactoring. Y
 This is a different kind of refactoring exercise. Most code exercises have a specific answer and are designed to be solved within a couple of hours. This one is intended to have a large number of solutions and take more then 10 hours without completion.
 
 The idea is to be an exercise that you can continuously go back to and see new things. This is not intended for someone who is new to "_test based refactoring_" but for those who are familiar with the process and want to stay sharp or want to dive deeper.
+    
+
+## Requirements ##
+
+The requirements are for each exercise is in the language specific readme. Please look there to know more.
     
 
 ## Definitions ##
@@ -65,21 +71,7 @@ It is suggested that you:
 
 ## Run the tests ##
 
-`gittey test`
-
-This will run the tests. If the tests pass it will then prompt to commit files that changed.
-
-### Explore Code
-
-`gittey check`
-
-> Try not to use this one.
-
-This will run the tests but without trying to commit.
-
-### Commit Code regardless of test passing
-
-`gittey commit`
+Thanks to Gittey running the tests looks the same. However please look at the language specific read me for how to run the tests.
     
 
 ## Purpose of Code ##

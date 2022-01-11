@@ -6,6 +6,7 @@
 (table-of-contents
     (section-main "./note.md")
     (section-main "./intro.md")
+    (section-main "./reqs.md")
     (section-main "./def.md")
     (section-main "./setup.md")
     (section-main "./run.md")
