@@ -23,7 +23,8 @@
         },
         {
             "name": "shrink",
-            "command": "npx rimrafx **/bin; npx rimrafx **/obj; npx rimrafx **/TestResults; npx rimrafx **/coveragereport"
+            "command": "npx rimrafx **/bin; npx rimrafx **/obj; npx rimrafx **/TestResults; npx rimrafx **/coveragereport",
+            "description": "removes all untracked files and directories"
         },
         {
             "name": "docs",
