@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using Shape.Lib;
 using Shape.Lib.Types;
 
@@ -26,7 +27,8 @@ namespace Shape.Tests
             Assert.AreEqual("Point", result.Type);
             Assert.AreEqual(point.X, result.X);
             Assert.AreEqual(point.Y, result.Y);
-            Assert.AreEqual(point, result);
+            
+            Assert.AreEqual(((IDictionary<string, object>)point).Keys.Count, 3);
         }
     }
 }
