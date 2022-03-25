@@ -49,7 +49,7 @@ export function sortingHat(roster) {
     }
     else {
         if(roster.length === 0){
-            cS = classify([{ v: "Init", areEqual: (_v) => false }])
+            cS = classify([{ v: "Init" }])
             that = {}
         }
         else {
@@ -70,7 +70,7 @@ export function sortingHat(roster) {
         }
         else {
             cS = cS(1)
-            if (roster.length === cS() && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (Math.abs(v.x - value.x) <= 0.001) && (Boolean(value.y) || value.y === 0) && (Math.abs(v.y - value.y) <= 0.001)) === index }).length) === cS()) 
+            if (roster.length === cS() && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (Math.abs(v.x - value.x) <= 0.001) && (Boolean(value.y) || value.y === 0) && (Math.abs(v.y - value.y) <= 0.001)) === index }).length) === cS())
             {
                 that.p2 = roster[1]
                 that.p1 = roster[0]
@@ -80,7 +80,7 @@ export function sortingHat(roster) {
             }
             else {
                 cS = cS(2)
-                if (roster.length === cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (Math.abs(roster[0].x - roster[roster.length - 1].x) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (Math.abs(v.x - value.x) <= 0.001) && (Boolean(value.y) || value.y === 0) && (Math.abs(v.y - value.y) <= 0.001)) === index }).length) === (cS() - 1)) 
+                if (roster.length === cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (Math.abs(roster[0].x - roster[roster.length - 1].x) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (Math.abs(v.x - value.x) <= 0.001) && (Boolean(value.y) || value.y === 0) && (Math.abs(v.y - value.y) <= 0.001)) === index }).length) === (cS() - 1))
                 {
                     that.type = 'Triangle'
                     that.p1 = roster[0]
