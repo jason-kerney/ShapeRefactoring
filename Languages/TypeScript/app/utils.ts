@@ -53,7 +53,7 @@ export function sortingHat(roster) {
             that = {}
         }
         else {
-            cS = classify([{ v: "Init", x: "Init", Type: "Initter",  areEqual: (_v) => true }])
+            cS = classify([{ v: "Init", x: "Init", Type: "Initter" }])
             that = {}
         }
     }
