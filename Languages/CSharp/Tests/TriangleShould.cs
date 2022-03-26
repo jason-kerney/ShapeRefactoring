@@ -55,6 +55,14 @@ namespace Shape.Tests
             Assert.AreEqual(3, result.SideA.Length, 0.001);
             Assert.AreEqual(4, result.SideB.Length, 0.001);
             Assert.AreEqual(5, result.SideC.Length, 0.001);
+            
+            Assert.IsFalse(result.SideA.Slope.IsSome, "SideA.Slope.IsSome");
+            
+            Assert.IsTrue(result.SideB.Slope.IsSome, "SideB.Slope.IsSome");
+            Assert.AreEqual(0, result.SideB.Slope.Value, 0.001);
+            
+            Assert.IsTrue(result.SideC.Slope.IsSome, "SideC.Slope.IsSome");
+            Assert.AreEqual(0.75, result.SideC.Slope.Value, 0.001);
         }
 
         [TestMethod]
@@ -76,6 +84,14 @@ namespace Shape.Tests
             Assert.AreEqual(12, result.SideA.Length, 0.001);
             Assert.AreEqual(16, result.SideB.Length, 0.001);
             Assert.AreEqual(20, result.SideC.Length, 0.001);
+            
+            Assert.IsFalse(result.SideA.Slope.IsSome, "SideA.Slope.IsSome");
+            
+            Assert.IsTrue(result.SideB.Slope.IsSome, "SideA.Slope.IsSome");
+            Assert.AreEqual(0, result.SideB.Slope.Value, 0.001);
+            
+            Assert.IsTrue(result.SideC.Slope.IsSome, "SideC.Slope.IsSome");
+            Assert.AreEqual(0.75, result.SideC.Slope.Value, 0.001);
         }
 
         [TestMethod]
@@ -113,11 +129,51 @@ namespace Shape.Tests
             Assert.AreEqual(b, result.SideB.Length, 0.001);
             Assert.AreEqual(2 * a, result.SideC.Length, 0.001);
             
+            Assert.IsTrue(result.SideA.Slope.IsSome, "SideA.Slope.IsSome");
+            Assert.AreEqual(0, result.SideA.Slope.Value, 0.001);
+            
+            Assert.IsFalse(result.SideB.Slope.IsSome, "SideB.Slope.IsSome");
+            
+            Assert.IsTrue(result.SideC.Slope.IsSome, "SideC.Slope.IsSome");
+            Assert.AreEqual(-1.732, result.SideC.Slope.Value, 0.001);
+            
             Assert.AreEqual(30, result.AngleA.Degrees, 0.001);
             Assert.AreEqual(60, result.AngleB.Degrees, 0.001);
             Assert.AreEqual(90, result.AngleC.Degrees, 0.001);
             
             Assert.AreEqual(7.794, result.Area, 0.001);
+        }
+
+        [TestMethod]
+        public void CorrectlyHandleFirstAndLastPointOnSameX()
+        {
+            
+            var points = Builder.Build(
+                (1, 0),
+                (0, 0),
+                (1, 2),
+                (1, 0)
+            );
+
+            var result = Classifier.Classify(points);
+            
+            Assert.AreEqual(1, result.SideA.Length, 0.001);
+            Assert.AreEqual(2.236, result.SideB.Length, 0.001);
+            Assert.AreEqual(2, result.SideC.Length, 0.001);
+            
+            Assert.IsTrue(result.SideA.Slope.IsSome, "SideA.Slope.IsSome");
+            Assert.AreEqual(0, result.SideA.Slope.Value, 0.001);
+            
+            Assert.IsTrue(result.SideB.Slope.IsSome, "SideB.Slope.IsSome");
+            Assert.AreEqual(2, result.SideB.Slope.Value, 0.001);
+            
+            Assert.IsFalse(result.SideC.Slope.IsSome, "SideC.Slope.IsSome");
+            
+            Assert.AreEqual(26.565, result.AngleA.Degrees, 0.001);
+            Assert.AreEqual(90, result.AngleB.Degrees, 0.001);
+            Assert.AreEqual(63.434, result.AngleC.Degrees, 0.001);
+            
+            Assert.AreEqual(1, result.Area, 0.001);
         }
 
         [TestMethod]
