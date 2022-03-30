@@ -109,7 +109,7 @@ describe('Line Segment', () => {
     })
 
     it('should not have a slope if both points have an x of -51', () => {
-        const x = 51
+        const x = -51
         const points = build(
             [x, 0],
             [x, 4],
