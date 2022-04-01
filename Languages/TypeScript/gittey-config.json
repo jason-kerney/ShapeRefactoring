@@ -28,7 +28,7 @@
         },
         {
             "name": "docs",
-            "command": "cls && booklisp ./documentation/main.md ./readme.md",
+            "command": "cls && booklisp ./documentation/_main.md ./readme.md",
             "description": "sets project state to that of the last committed state"
         },
         {

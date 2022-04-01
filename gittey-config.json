@@ -13,31 +13,31 @@
     "aliases": [
         {
             "name": "docsMain",
-            "command": "booklisp ./documentation/readme/main.md ./readme.md && booklisp ./documentation/contrib/main.md ./contributing.md",
+            "command": "booklisp ./documentation/readme/_main.md ./readme.md && booklisp ./documentation/contrib/_main.md ./contributing.md",
             "description": "generates the main documentation"
         },
         {
             "name": "docsTests",
-            "command": "booklisp ./documentation/tests/main.md ./test_cases.md",
+            "command": "booklisp ./documentation/tests/_main.md ./test_cases.md",
             "description": "generates the documentation for the C# exercise"
         },
         {
             "name": "docsNew",
-            "command": "booklisp ./documentation/newlang/main.md ./new_exercises.md"
+            "command": "booklisp ./documentation/newlang/_main.md ./new_exercises.md"
         },
         {
-            "name": "docsJSOO",
-            "command": "booklisp ./Languages/TypeScript/documentation/main.md ./Languages/TypeScript/readme.md",
-            "description": "generates the documentation for the JS OO exercise"
+            "name": "docsTS",
+            "command": "booklisp ./Languages/TypeScript/documentation/_main.md ./Languages/TypeScript/readme.md",
+            "description": "generates the documentation for the Type Script exercise"
         },
         {
             "name": "docsCS",
-            "command": "booklisp ./Languages/CSharp/documentation/main.md ./Languages/CSharp/readme.md",
+            "command": "booklisp ./Languages/CSharp/documentation/_main.md ./Languages/CSharp/readme.md",
             "description": "generates the documentation for the C# exercise"
         },
         {
             "name": "docs",
-            "command": "gittey docsMain; gittey docsTests; gittey docsNew; gittey docsJSOO; gittey docsCS",
+            "command": "gittey docsMain; gittey docsTests; gittey docsNew; gittey docsTS; gittey docsCS",
             "description": "generates all the documentations"
         },
         {
