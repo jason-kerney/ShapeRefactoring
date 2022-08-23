@@ -167,7 +167,17 @@ export function sortingHat(roster) {
               slope: Math.abs(roster[3].x - roster[0].x) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
             }
             that.area = Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) * Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2))
-            that.perimeter = Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) + Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)) + Math.sqrt(Math.pow(roster[2].x - roster[3].x, 2) + Math.pow(roster[2].y - roster[3].y, 2)) + Math.sqrt(Math.pow(roster[3].y - roster[0].y, 2) + Math.pow(roster[3].x - roster[0].x, 2))
+            that.perimeter = (
+              function () {
+                let t = 0;
+                for (let index = 0; index < roster.length; index++) {
+                  if (index > 3) continue;
+                  let w = index == 3 ? 0 : index + 1;
+                  t += Math.sqrt(Math.pow(roster[index].x - roster[w].x, 2) + Math.pow(roster[index].y - roster[w].y, 2))
+                }
+                return t;
+              }()
+            )
           }
           else {
             cS = cS(-4)
