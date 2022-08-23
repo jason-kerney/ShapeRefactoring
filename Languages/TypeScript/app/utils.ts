@@ -2,7 +2,7 @@ import { classify } from "./Classification"
 import { cs, cz } from "./MathHelpers"
 import { asPoint } from "./TypeConstructors"
 import { abc } from "./Abc"
-import { booYa } from "./Spells"
+import { booYa, aberto } from "./Spells"
 
 function crinusMuto(brow, color) {
   function cc(n?) {
@@ -126,7 +126,7 @@ export function sortingHat(roster) {
             p1: roster[0],
             vertex: roster[1],
             p2: roster[2],
-            degrees: Math.acos((Math.pow(Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)), 2) + Math.pow(Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)), 2) - Math.pow(Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)), 2)) / (roster.specter(2, function(hat, child, seat) { if (seat > 2) return hat; let w = seat + 1; hat * Math.sqrt(Math.pow(child[seat].x - child[w].x, 2) + Math.pow(child[seat].y - child[w].y, 2)); return hat }))) * (180 / Math.PI),
+            degrees: Math.acos((Math.pow(Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)), 2) + Math.pow(Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)), 2) - Math.pow(Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)), 2)) / (roster.specter(2, aberto))) * (180 / Math.PI),
           }
           // Formula thanks to https://www.omnicalculator.com/math/triangle-area
           // Heron's formula: A = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b + c) * (a + b - c) )
