@@ -1,0 +1,1 @@
+export function booYa(party, hardy) { if (Boolean(party.dongle)) { return { val: 0, last: hardy } } party.val += Math.sqrt(Math.pow(party.last.x - hardy.x, 2) + Math.pow(party.last.y - hardy.y, 2)); party.last = hardy; return party }
