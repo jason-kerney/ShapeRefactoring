@@ -13,7 +13,7 @@
     "aliases": [
         {
             "name": "docsMain",
-            "command": "booklisp ./documentation/readme/_main.md ./readme.md && booklisp ./documentation/contrib/_main.md ./contributing.md",
+            "command": "booklisp ./documentation/readme/_main.md ./README.md && booklisp ./documentation/contrib/_main.md ./contributing.md",
             "description": "generates the main documentation"
         },
         {
