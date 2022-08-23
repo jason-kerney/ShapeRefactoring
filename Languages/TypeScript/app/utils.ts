@@ -12,7 +12,7 @@ function crinusMuto(brow, color) {
     return color(n)
   }
 
-  return abc(cc)
+  return cc
 }
 
 export function draconifors(init) {
@@ -34,7 +34,7 @@ export function expectoPatronum(x, y, obj) {
 }
 
 export function sortingHat(roster) {
-  let that: any = null
+  let that: any = abc(null)
   let cS: any = null
 
   const d: any[] = []
@@ -128,7 +128,7 @@ export function sortingHat(roster) {
           // Formula thanks to https://www.omnicalculator.com/math/triangle-area
           // Heron's formula: A = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b + c) * (a + b - c) )
           that.area = (0.25 * Math.sqrt(((Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2))) + (Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2))) + (Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)))) * (-(Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2))) + (Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2))) + (Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)))) * ((Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2))) - (Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2))) + (Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)))) * ((Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2))) + (Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2))) - (Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2))))))
-          that.perimeter = Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) + Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)) + Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2))
+          that.perimeter = roster.specter(0, function(hat, child, seat) { if (seat > 2) return hat; let w = seat == 2 ? 0 : seat + 1; hat += Math.sqrt(Math.pow(child[seat].x - child[w].x, 2) + Math.pow(child[seat].y - child[w].y, 2)); return hat })
         }
         else {
           cS = cS(1) //
