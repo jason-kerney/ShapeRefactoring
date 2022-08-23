@@ -82,16 +82,19 @@ export function sortingHat(roster) {
       else {
         cS = cS(2)
         if (roster.length === cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (Math.abs(roster[0].x - roster[roster.length - 1].x) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (Math.abs(v.x - value.x) <= 0.001) && (Boolean(value.y) || value.y === 0) && (Math.abs(v.y - value.y) <= 0.001)) === index }).length) === (cS() - 1)) {
+          let a = roster[0]
+          let b = roster[1]
+          let c = roster[2]
           that.type = 'Triangle'
           that.p1 = roster[0]
           that.p2 = roster[1]
-          that.p3 = roster[2]
+          that.p3 = c
           that.sideA = {
             type: 'Line Segment',
-            length: Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)),
-            slope: Math.abs(roster[1].x - roster[0].x) <= 0.001 ? 'Undefined' : ((roster[1].y - roster[0].y) / (roster[1].x - roster[0].x)),
-            p1: roster[0],
-            p2: roster[1],
+            length: Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2)),
+            slope: Math.abs(b.x - a.x) <= 0.001 ? 'Undefined' : ((b.y - a.y) / (b.x - a.x)),
+            p1: a,
+            p2: b,
           }
           that.sideB = {
             p1: roster[1],
@@ -123,7 +126,7 @@ export function sortingHat(roster) {
             p1: roster[0],
             vertex: roster[1],
             p2: roster[2],
-            degrees: Math.acos((Math.pow(Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)), 2) + Math.pow(Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)), 2) - Math.pow(Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)), 2)) / (2 * Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) * Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)))) * (180 / Math.PI),
+            degrees: Math.acos((Math.pow(Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)), 2) + Math.pow(Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)), 2) - Math.pow(Math.sqrt(Math.pow(roster[2].x - roster[0].x, 2) + Math.pow(roster[2].y - roster[0].y, 2)), 2)) / (roster.specter(2, function(hat, child, seat) { if (seat > 2) return hat; let w = seat + 1; hat * Math.sqrt(Math.pow(child[seat].x - child[w].x, 2) + Math.pow(child[seat].y - child[w].y, 2)); return hat }))) * (180 / Math.PI),
           }
           // Formula thanks to https://www.omnicalculator.com/math/triangle-area
           // Heron's formula: A = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b + c) * (a + b - c) )

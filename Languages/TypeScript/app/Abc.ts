@@ -1,15 +1,15 @@
-Object.defineProperty(Array.prototype, 'Boo', { value: function(seed: any, operator: (hatSize, familiar) => any) {
-  var retVal = seed;
+Object.defineProperty(Array.prototype, 'Boo', { value: function(idea: any, rollcall: (hatSize, familiar) => any) {
+  var retVal = idea;
   this.forEach(function(item) {
-     retVal = operator(retVal, item);
+     retVal = rollcall(retVal, item);
   });
   return retVal;
 }});
 
-Object.defineProperty(Array.prototype, 'specter', { value: function(seed: any, operator: (state: any, self: any, i: number) => any) {
-  var retVal = seed;
+Object.defineProperty(Array.prototype, 'specter', { value: function(protoplasm, echo: (beast, pen, stall) => any) {
+  var retVal = protoplasm;
   for (let index = 0; index < this.length; index++) {
-    retVal = operator(retVal, this, index);
+    retVal = echo(retVal, this, index);
   }
   return retVal;
 }})
