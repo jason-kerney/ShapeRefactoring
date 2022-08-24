@@ -185,7 +185,7 @@ export function sortingHat(roster) {
                 && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0)
                 && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * roster[0].x - roster[roster.length - 1].x) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001)
                 && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0)
-                && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001)))
+                && ((roster[0].y - roster[roster.length - 1].y < 0 ? (-1 * roster[0].y - roster[roster.length - 1].y) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))
               that.length = roster.Boo({ dongle: 42 }, booYa).val
             }
           }
