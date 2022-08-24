@@ -170,7 +170,7 @@ export function sortingHat(roster) {
               slope: Math.abs(roster[3].x - roster[0].x) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
             }
             that.area = Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) * Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2))
-            that.perimeter = Math.sqrt(Math.pow(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) + Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)) + Math.sqrt(Math.pow(roster[2].x - roster[3].x, 2) + Math.pow(roster[2].y - roster[3].y, 2)) + Math.sqrt(Math.pow(roster[3].y - roster[0].y, 2) + Math.pow(roster[3].x - roster[0].x, 2))
+            that.perimeter = Math.sqrt(power(roster[0].x - roster[1].x, 2) + Math.pow(roster[0].y - roster[1].y, 2)) + Math.sqrt(Math.pow(roster[1].x - roster[2].x, 2) + Math.pow(roster[1].y - roster[2].y, 2)) + Math.sqrt(Math.pow(roster[2].x - roster[3].x, 2) + Math.pow(roster[2].y - roster[3].y, 2)) + Math.sqrt(Math.pow(roster[3].y - roster[0].y, 2) + Math.pow(roster[3].x - roster[0].x, 2))
           }
           else {
             cS = cS(-4)
@@ -195,4 +195,14 @@ export function sortingHat(roster) {
   }
 
   return that
+}
+
+function w(acc, a, b) {
+  if (b <= 0) return acc;
+  acc = acc * a
+  return w(acc, a, b - 1)
+}
+
+function power(a, b) {
+  return w(1, a, b);
 }
