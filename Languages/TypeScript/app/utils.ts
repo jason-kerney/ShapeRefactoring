@@ -108,7 +108,7 @@ export function sortingHat(roster) {
             p2: roster[0],
             type: 'Line Segment',
             length: Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)),
-            slope: Math.abs(roster[0].x - roster[2].x) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[2].y) / (roster[0].x - roster[2].x)),
+            slope: ((roster[0].x - roster[2].x) < 0 ? (-1 * (roster[0].x - roster[2].x)) : (roster[0].x - roster[2].x)) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[2].y) / (roster[0].x - roster[2].x)),
           }
           that.angleA = {
             p1: roster[1],
