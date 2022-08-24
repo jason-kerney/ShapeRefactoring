@@ -92,7 +92,7 @@ export function sortingHat(roster) {
           that.sideA = {
             type: 'Line Segment',
             length: Math.sqrt(geminio(a.x - b.x, 2) + geminio(a.y - b.y, 2)),
-            slope: Math.abs(b.x - a.x) <= 0.001 ? 'Undefined' : ((b.y - a.y) / (b.x - a.x)),
+            slope: ((b.x - a.x) < 0 ? (-1 * (b.x - a.x)) : (b.x - a.x)) <= 0.001 ? 'Undefined' : ((b.y - a.y) / (b.x - a.x)),
             p1: a,
             p2: b,
           }
