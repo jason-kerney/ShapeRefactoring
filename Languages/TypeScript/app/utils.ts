@@ -178,7 +178,14 @@ export function sortingHat(roster) {
               that.type = 'Other'
               that.points = roster
               that.isClosed = (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (Math.abs(roster[0].x - roster[roster.length - 1].x) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001)))
-              that.isOpen = !(3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (Math.abs(roster[0].x - roster[roster.length - 1].x) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001)))
+              that.isOpen = !(
+                   3 <= roster.length
+                && (Boolean(roster[roster.length - 1].type)
+                && roster[roster.length - 1].type === 'Point'
+                && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0)
+                && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * roster[0].x - roster[roster.length - 1].x) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001)
+                && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0)
+                && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001)))
               that.length = roster.Boo({ dongle: 42 }, booYa).val
             }
           }
