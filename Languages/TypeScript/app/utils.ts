@@ -167,7 +167,7 @@ export function sortingHat(roster) {
               p1: roster[3],
               p2: roster[0],
               length: Math.sqrt(geminio(roster[3].x - roster[0].x, 2) + geminio(roster[3].y - roster[0].y, 2)),
-              slope: Math.abs(roster[3].x - roster[0].x) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
+              slope: ((roster[3].x - roster[0].x) < 0 ? (-1 * roster[3].x - roster[0].x) : (roster[3].x - roster[0].x)) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
             }
             that.area = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) * Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))
             that.perimeter = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) + Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)) + Math.sqrt(geminio(roster[2].x - roster[3].x, 2) + geminio(roster[2].y - roster[3].y, 2)) + Math.sqrt(geminio(roster[3].y - roster[0].y, 2) + geminio(roster[3].x - roster[0].x, 2))
