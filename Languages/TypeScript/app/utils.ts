@@ -146,7 +146,7 @@ export function sortingHat(roster) {
               p1: roster[0],
               p2: roster[1],
               length: Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)),
-              slope: (Math.abs(roster[1].x - roster[0].x) <= 0.001) ? 'Undefined' : ((roster[1].y - roster[0].y) / (roster[1].x - roster[0].x)),
+              slope: (((roster[1].x - roster[0].x) < 0 ? (-1 * (roster[1].x - roster[0].x)) : (roster[1].x - roster[0].x)) <= 0.001) ? 'Undefined' : ((roster[1].y - roster[0].y) / (roster[1].x - roster[0].x)),
             }
             that.sideB = {
               type: 'Line Segment',
