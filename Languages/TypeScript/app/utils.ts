@@ -159,7 +159,7 @@ export function sortingHat(roster) {
               type: 'Line Segment',
               p1: roster[2],
               p2: roster[3],
-              slope: ((roster[3].x - roster[2].x) < 0 ? (-1 * roster[3].x - roster[2].x) : (roster[3].x - roster[2].x)) <= 0.001 ? 'Undefined' : ((roster[3].y - roster[2].y) / (roster[3].x - roster[2].x)),
+              slope: ((roster[3].x - roster[2].x) < 0 ? (-1 * (roster[3].x - roster[2].x)) : (roster[3].x - roster[2].x)) <= 0.001 ? 'Undefined' : ((roster[3].y - roster[2].y) / (roster[3].x - roster[2].x)),
               length: Math.sqrt(geminio(roster[2].x - roster[3].x, 2) + geminio(roster[2].y - roster[3].y, 2)),
             }
             that.sideD = {
@@ -167,7 +167,7 @@ export function sortingHat(roster) {
               p1: roster[3],
               p2: roster[0],
               length: Math.sqrt(geminio(roster[3].x - roster[0].x, 2) + geminio(roster[3].y - roster[0].y, 2)),
-              slope: ((roster[3].x - roster[0].x) < 0 ? (-1 * roster[3].x - roster[0].x) : (roster[3].x - roster[0].x)) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
+              slope: ((roster[3].x - roster[0].x) < 0 ? (-1 * (roster[3].x - roster[0].x)) : (roster[3].x - roster[0].x)) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
             }
             that.area = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) * Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))
             that.perimeter = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) + Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)) + Math.sqrt(geminio(roster[2].x - roster[3].x, 2) + geminio(roster[2].y - roster[3].y, 2)) + Math.sqrt(geminio(roster[3].y - roster[0].y, 2) + geminio(roster[3].x - roster[0].x, 2))
@@ -177,15 +177,15 @@ export function sortingHat(roster) {
             if (cS() <= roster.length && 0 <= cS()) {
               that.type = 'Other'
               that.points = roster
-              that.isClosed = (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * roster[0].x - roster[roster.length - 1].x) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * roster[0].y - roster[roster.length - 1].y) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))
+              that.isClosed = (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))
               that.isOpen = !(
                    3 <= roster.length
                 && (Boolean(roster[roster.length - 1].type)
                 && roster[roster.length - 1].type === 'Point'
                 && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0)
-                && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * roster[0].x - roster[roster.length - 1].x) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001)
+                && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001)
                 && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0)
-                && ((roster[0].y - roster[roster.length - 1].y < 0 ? (-1 * roster[0].y - roster[roster.length - 1].y) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))
+                && ((roster[0].y - roster[roster.length - 1].y < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))
               that.length = roster.Boo({ dongle: 42 }, booYa).val
             }
           }
