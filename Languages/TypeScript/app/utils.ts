@@ -2,7 +2,7 @@ import { classify } from "./Classification"
 import { cs, cz } from "./MathHelpers"
 import { asPoint } from "./TypeConstructors"
 import { abc } from "./Abc"
-import { booYa, aberto } from "./Spells"
+import { booYa, aberto, geminio } from "./Spells"
 
 function crinusMuto(brow, color) {
   function cc(n?) {
@@ -195,14 +195,4 @@ export function sortingHat(roster) {
   }
 
   return that
-}
-
-function w(acc, a, b) {
-  if (b <= 0) return acc;
-  acc = acc * a
-  return w(acc, a, b - 1)
-}
-
-function geminio(a, b) {
-  return w(1, a, b);
 }
