@@ -39,10 +39,10 @@ export function sortingHat(roster) {
 
   const d: any[] = []
   for (let vp = 2; vp < roster.length; vp++) {
-    d.push(Math.acos((power(Math.sqrt(power(roster[vp - 2].x - roster[vp - 1].x, 2) + power(roster[vp - 2].y - roster[vp - 1].y, 2)), 2) + power(Math.sqrt(power(roster[vp - 1].x - roster[vp].x, 2) + power(roster[vp - 1].y - roster[vp].y, 2)), 2) - power(Math.sqrt(power(roster[vp].x - roster[vp - 2].x, 2) + power(roster[vp].y - roster[vp - 2].y, 2)), 2)) / (2 * Math.sqrt(power(roster[vp - 2].x - roster[vp - 1].x, 2) + power(roster[vp - 2].y - roster[vp - 1].y, 2)) * Math.sqrt(power(roster[vp - 1].x - roster[vp].x, 2) + power(roster[vp - 1].y - roster[vp].y, 2)))) * (180 / Math.PI))
+    d.push(Math.acos((geminio(Math.sqrt(geminio(roster[vp - 2].x - roster[vp - 1].x, 2) + geminio(roster[vp - 2].y - roster[vp - 1].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[vp - 1].x - roster[vp].x, 2) + geminio(roster[vp - 1].y - roster[vp].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[vp].x - roster[vp - 2].x, 2) + geminio(roster[vp].y - roster[vp - 2].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[vp - 2].x - roster[vp - 1].x, 2) + geminio(roster[vp - 2].y - roster[vp - 1].y, 2)) * Math.sqrt(geminio(roster[vp - 1].x - roster[vp].x, 2) + geminio(roster[vp - 1].y - roster[vp].y, 2)))) * (180 / Math.PI))
   }
   if (3 <= roster.length && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (Math.abs(roster[0].x - roster[roster.length - 1].x) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (Math.abs(roster[0].y - roster[roster.length - 1].y) <= 0.001)))) {
-    d.push(Math.acos((power(Math.sqrt(power(roster[roster.length - 2].x - roster[roster.length - 1].x, 2) + power(roster[roster.length - 2].y - roster[roster.length - 1].y, 2)), 2) + power(Math.sqrt(power(roster[roster.length - 1].x - roster[1].x, 2) + power(roster[roster.length - 1].y - roster[1].y, 2)), 2) - power(Math.sqrt(power(roster[1].x - roster[roster.length - 2].x, 2) + power(roster[1].y - roster[roster.length - 2].y, 2)), 2)) / (2 * Math.sqrt(power(roster[roster.length - 2].x - roster[roster.length - 1].x, 2) + power(roster[roster.length - 2].y - roster[roster.length - 1].y, 2)) * Math.sqrt(power(roster[roster.length - 1].x - roster[1].x, 2) + power(roster[roster.length - 1].y - roster[1].y, 2)))) * (180 / Math.PI))
+    d.push(Math.acos((geminio(Math.sqrt(geminio(roster[roster.length - 2].x - roster[roster.length - 1].x, 2) + geminio(roster[roster.length - 2].y - roster[roster.length - 1].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[roster.length - 1].x - roster[1].x, 2) + geminio(roster[roster.length - 1].y - roster[1].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[1].x - roster[roster.length - 2].x, 2) + geminio(roster[1].y - roster[roster.length - 2].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[roster.length - 2].x - roster[roster.length - 1].x, 2) + geminio(roster[roster.length - 2].y - roster[roster.length - 1].y, 2)) * Math.sqrt(geminio(roster[roster.length - 1].x - roster[1].x, 2) + geminio(roster[roster.length - 1].y - roster[1].y, 2)))) * (180 / Math.PI))
   }
 
   if (roster[0]?.v == "Init") {
@@ -75,7 +75,7 @@ export function sortingHat(roster) {
       if (roster.length === cS() && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (Math.abs(v.x - value.x) <= 0.001) && (Boolean(value.y) || value.y === 0) && (Math.abs(v.y - value.y) <= 0.001)) === index }).length) === cS()) {
         that.p2 = roster[1]
         that.p1 = roster[0]
-        that.length = Math.sqrt(power(roster[0].y - roster[1].y, 2) + power(roster[0].x - roster[1].x, 2))
+        that.length = Math.sqrt(geminio(roster[0].y - roster[1].y, 2) + geminio(roster[0].x - roster[1].x, 2))
         that.slope = (Math.abs(roster[1].x - roster[0].x) <= 0.001 ? 'Undefined' : ((roster[1].y - roster[0].y) / (roster[1].x - roster[0].x)))
         that.type = 'Line Segment'
       }
@@ -91,7 +91,7 @@ export function sortingHat(roster) {
           that.p3 = c
           that.sideA = {
             type: 'Line Segment',
-            length: Math.sqrt(power(a.x - b.x, 2) + power(a.y - b.y, 2)),
+            length: Math.sqrt(geminio(a.x - b.x, 2) + geminio(a.y - b.y, 2)),
             slope: Math.abs(b.x - a.x) <= 0.001 ? 'Undefined' : ((b.y - a.y) / (b.x - a.x)),
             p1: a,
             p2: b,
@@ -99,7 +99,7 @@ export function sortingHat(roster) {
           that.sideB = {
             p1: roster[1],
             p2: roster[2],
-            length: Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)),
+            length: Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)),
             slope: Math.abs(roster[2].x - roster[1].x) <= 0.001 ? 'Undefined' : ((roster[2].y - roster[1].y) / (roster[2].x - roster[1].x)),
             type: 'Line Segment',
           }
@@ -107,31 +107,31 @@ export function sortingHat(roster) {
             p1: roster[2],
             p2: roster[0],
             type: 'Line Segment',
-            length: Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)),
+            length: Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)),
             slope: Math.abs(roster[0].x - roster[2].x) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[2].y) / (roster[0].x - roster[2].x)),
           }
           that.angleA = {
             p1: roster[1],
             vertex: roster[2],
             p2: roster[0],
-            degrees: Math.acos((power(Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)), 2) + power(Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)), 2) - power(Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)), 2)) / (2 * Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)) * Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)))) * (180 / Math.PI),
+            degrees: Math.acos((geminio(Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)) * Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)))) * (180 / Math.PI),
           }
           that.angleB = {
             p1: roster[2],
             vertex: roster[0],
             p2: roster[1],
-            degrees: Math.acos((power(Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)), 2) + power(Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)), 2) - power(Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)), 2)) / (2 * Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)) * Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)))) * (180 / Math.PI),
+            degrees: Math.acos((geminio(Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)) * Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)))) * (180 / Math.PI),
           }
           that.angleC = {
             p1: roster[0],
             vertex: roster[1],
             p2: roster[2],
-            degrees: Math.acos((power(Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)), 2) + power(Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)), 2) - power(Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)), 2)) / (roster.specter(2, aberto))) * (180 / Math.PI),
+            degrees: Math.acos((geminio(Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)), 2)) / (roster.specter(2, aberto))) * (180 / Math.PI),
           }
           // Formula thanks to https://www.omnicalculator.com/math/triangle-area
           // Heron's formula: A = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b + c) * (a + b - c) )
-          that.area = (0.25 * Math.sqrt(((Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2))) + (Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2))) + (Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)))) * (-(Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2))) + (Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2))) + (Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)))) * ((Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2))) - (Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2))) + (Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2)))) * ((Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2))) + (Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2))) - (Math.sqrt(power(roster[2].x - roster[0].x, 2) + power(roster[2].y - roster[0].y, 2))))))
-          that.perimeter = roster.specter(0, function(hat, child, seat) { if (seat > 2) return hat; let w = seat == 2 ? 0 : seat + 1; hat += Math.sqrt(power(child[seat].x - child[w].x, 2) + power(child[seat].y - child[w].y, 2)); return hat })
+          that.area = (0.25 * Math.sqrt(((Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2))) + (Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))) + (Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)))) * (-(Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2))) + (Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))) + (Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)))) * ((Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2))) - (Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))) + (Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2)))) * ((Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2))) + (Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))) - (Math.sqrt(geminio(roster[2].x - roster[0].x, 2) + geminio(roster[2].y - roster[0].y, 2))))))
+          that.perimeter = roster.specter(0, function(hat, child, seat) { if (seat > 2) return hat; let w = seat == 2 ? 0 : seat + 1; hat += Math.sqrt(geminio(child[seat].x - child[w].x, 2) + geminio(child[seat].y - child[w].y, 2)); return hat })
         }
         else {
           cS = cS(1) //
@@ -145,13 +145,13 @@ export function sortingHat(roster) {
               type: 'Line Segment',
               p1: roster[0],
               p2: roster[1],
-              length: Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)),
+              length: Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)),
               slope: (Math.abs(roster[1].x - roster[0].x) <= 0.001) ? 'Undefined' : ((roster[1].y - roster[0].y) / (roster[1].x - roster[0].x)),
             }
             that.sideB = {
               type: 'Line Segment',
               p1: roster[1],
-              length: Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)),
+              length: Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)),
               slope: Math.abs(roster[2].x - roster[1].x) <= 0.001 ? 'Undefined' : ((roster[2].y - roster[1].y) / (roster[2].x - roster[1].x)),
               p2: roster[2],
             }
@@ -160,17 +160,17 @@ export function sortingHat(roster) {
               p1: roster[2],
               p2: roster[3],
               slope: Math.abs(roster[3].x - roster[2].x) <= 0.001 ? 'Undefined' : ((roster[3].y - roster[2].y) / (roster[3].x - roster[2].x)),
-              length: Math.sqrt(power(roster[2].x - roster[3].x, 2) + power(roster[2].y - roster[3].y, 2)),
+              length: Math.sqrt(geminio(roster[2].x - roster[3].x, 2) + geminio(roster[2].y - roster[3].y, 2)),
             }
             that.sideD = {
               type: 'Line Segment',
               p1: roster[3],
               p2: roster[0],
-              length: Math.sqrt(power(roster[3].x - roster[0].x, 2) + power(roster[3].y - roster[0].y, 2)),
+              length: Math.sqrt(geminio(roster[3].x - roster[0].x, 2) + geminio(roster[3].y - roster[0].y, 2)),
               slope: Math.abs(roster[3].x - roster[0].x) <= 0.001 ? 'Undefined' : ((roster[0].y - roster[3].y) / (roster[0].x - roster[3].x)),
             }
-            that.area = Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)) * Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2))
-            that.perimeter = Math.sqrt(power(roster[0].x - roster[1].x, 2) + power(roster[0].y - roster[1].y, 2)) + Math.sqrt(power(roster[1].x - roster[2].x, 2) + power(roster[1].y - roster[2].y, 2)) + Math.sqrt(power(roster[2].x - roster[3].x, 2) + power(roster[2].y - roster[3].y, 2)) + Math.sqrt(power(roster[3].y - roster[0].y, 2) + power(roster[3].x - roster[0].x, 2))
+            that.area = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) * Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2))
+            that.perimeter = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) + Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)) + Math.sqrt(geminio(roster[2].x - roster[3].x, 2) + geminio(roster[2].y - roster[3].y, 2)) + Math.sqrt(geminio(roster[3].y - roster[0].y, 2) + geminio(roster[3].x - roster[0].x, 2))
           }
           else {
             cS = cS(-4)
@@ -203,6 +203,6 @@ function w(acc, a, b) {
   return w(acc, a, b - 1)
 }
 
-function power(a, b) {
+function geminio(a, b) {
   return w(1, a, b);
 }
