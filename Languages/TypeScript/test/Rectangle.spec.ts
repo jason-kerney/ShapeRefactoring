@@ -87,6 +87,62 @@ describe('Rectangle', () => {
         expect((Math.abs(result.sideD.p2.x - points[0].x) <= 0.001) && (Math.abs(result.sideD.p2.y - points[0].y) <= 0.001), 'D.p2').to.be.true;
     });
 
+    it('should contain different line segments for its sides in different order', () => {
+        const points = build(
+          [4, 5],
+          [4, 1],
+          [1, 1],
+          [1, 5],
+          [4, 5]
+        );
+
+        const result = classify(points) ;
+
+        expect(result.sideA.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideA.p1.x - points[0].x) <= 0.001) && (Math.abs(result.sideA.p1.y - points[0].y) <= 0.001), 'A.p1').to.be.true;
+        expect((Math.abs(result.sideA.p2.x - points[1].x) <= 0.001) && (Math.abs(result.sideA.p2.y - points[1].y) <= 0.001), 'A.p2').to.be.true;
+
+        expect(result.sideB.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideB.p1.x - points[1].x) <= 0.001) && (Math.abs(result.sideB.p1.y - points[1].y) <= 0.001), 'B.p1').to.be.true;
+        expect((Math.abs(result.sideB.p2.x - points[2].x) <= 0.001) && (Math.abs(result.sideB.p2.y - points[2].y) <= 0.001), 'B.p2').to.be.true;
+
+        expect(result.sideC.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideC.p1.x - points[2].x) <= 0.001) && (Math.abs(result.sideC.p1.y - points[2].y) <= 0.001), 'C.p1').to.be.true;
+        expect((Math.abs(result.sideC.p2.x - points[3].x) <= 0.001) && (Math.abs(result.sideC.p2.y - points[3].y) <= 0.001), 'C.p2').to.be.true;
+
+        expect(result.sideD.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideD.p1.x - points[3].x) <= 0.001) && (Math.abs(result.sideD.p1.y - points[3].y) <= 0.001), 'D.p1').to.be.true;
+        expect((Math.abs(result.sideD.p2.x - points[0].x) <= 0.001) && (Math.abs(result.sideD.p2.y - points[0].y) <= 0.001), 'D.p2').to.be.true;
+    });
+
+    it('should contain different line segments for its sides in different order 2', () => {
+        const points = build(
+          [4, 1],
+          [1, 1],
+          [1, 5],
+          [4, 5],
+          [4, 1],
+        );
+
+        const result = classify(points) ;
+
+        expect(result.sideA.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideA.p1.x - points[0].x) <= 0.001) && (Math.abs(result.sideA.p1.y - points[0].y) <= 0.001), 'A.p1').to.be.true;
+        expect((Math.abs(result.sideA.p2.x - points[1].x) <= 0.001) && (Math.abs(result.sideA.p2.y - points[1].y) <= 0.001), 'A.p2').to.be.true;
+
+        expect(result.sideB.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideB.p1.x - points[1].x) <= 0.001) && (Math.abs(result.sideB.p1.y - points[1].y) <= 0.001), 'B.p1').to.be.true;
+        expect((Math.abs(result.sideB.p2.x - points[2].x) <= 0.001) && (Math.abs(result.sideB.p2.y - points[2].y) <= 0.001), 'B.p2').to.be.true;
+
+        expect(result.sideC.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideC.p1.x - points[2].x) <= 0.001) && (Math.abs(result.sideC.p1.y - points[2].y) <= 0.001), 'C.p1').to.be.true;
+        expect((Math.abs(result.sideC.p2.x - points[3].x) <= 0.001) && (Math.abs(result.sideC.p2.y - points[3].y) <= 0.001), 'C.p2').to.be.true;
+
+        expect(result.sideD.type).to.equal('Line Segment');
+        expect((Math.abs(result.sideD.p1.x - points[3].x) <= 0.001) && (Math.abs(result.sideD.p1.y - points[3].y) <= 0.001), 'D.p1').to.be.true;
+        expect((Math.abs(result.sideD.p2.x - points[0].x) <= 0.001) && (Math.abs(result.sideD.p2.y - points[0].y) <= 0.001), 'D.p2').to.be.true;
+    });
+
     it('should have correct area', () => {
         function check(result, x, y, width, height) {
             expect(result.area, `x: ${x}, y: ${y}, w: ${width}, h: ${height}`).to.be.closeTo(height * width, 0.001);
