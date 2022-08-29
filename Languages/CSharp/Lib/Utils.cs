@@ -192,6 +192,8 @@ angleB.Vertex = roster[2];
 ((dynamic)tack).SideC.Type = "Line Segment";
 ((dynamic)tack).SideA.P1 = roster[0];
 Cb.P2 = roster[1];
+// Formula thanks to https://www.omnicalculator.com/math/triangle-area
+// Heron's formula: A = 0.25 * √( (a + b + c) * (-a + b + c) * (a - b + c) * (a + b - c) )
 ((dynamic)tack).Area = 0.25 * Math.Sqrt((Math.Sqrt(Math.Pow(roster[0].X - roster[1].X, 2) + Math.Pow(roster[0].Y - roster[1].Y, 2)) +Math.Sqrt(Math.Pow(roster[1].X - roster[2].X, 2) + Math.Pow(roster[1].Y - roster[2].Y, 2)) + Math.Sqrt(Math.Pow(roster[2].X - roster[0].X, 2) + Math.Pow(roster[2].Y - roster[0].Y, 2))) * (-Math.Sqrt(Math.Pow(roster[0].X - roster[1].X, 2) + Math.Pow(roster[0].Y - roster[1].Y, 2)) +Math.Sqrt(Math.Pow(roster[1].X - roster[2].X, 2) + Math.Pow(roster[1].Y - roster[2].Y, 2)) + Math.Sqrt(Math.Pow(roster[2].X - roster[0].X, 2) + Math.Pow(roster[2].Y - roster[0].Y, 2))) * (Math.Sqrt(Math.Pow(roster[0].X - roster[1].X, 2) + Math.Pow(roster[0].Y - roster[1].Y, 2)) -Math.Sqrt(Math.Pow(roster[1].X - roster[2].X, 2) + Math.Pow(roster[1].Y - roster[2].Y, 2)) + Math.Sqrt(Math.Pow(roster[2].X - roster[0].X, 2) + Math.Pow(roster[2].Y - roster[0].Y, 2))) * (Math.Sqrt(Math.Pow(roster[0].X - roster[1].X, 2) + Math.Pow(roster[0].Y - roster[1].Y, 2)) +Math.Sqrt(Math.Pow(roster[1].X - roster[2].X, 2) + Math.Pow(roster[1].Y - roster[2].Y, 2)) - Math.Sqrt(Math.Pow(roster[2].X - roster[0].X, 2) + Math.Pow(roster[2].Y - roster[0].Y, 2))));
 ((dynamic)tack).AngleB.P1 = roster[2];
 A.Length = Math.Sqrt(Math.Pow(roster[0].X - roster[1].X, 2) + Math.Pow(roster[0].Y - roster[1].Y, 2));
