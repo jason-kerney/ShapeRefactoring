@@ -13,7 +13,7 @@
     "aliases": [
         {
             "name": "test",
-            "command": "cls && dotnet test --collect:\"XPlat Code Coverage\" && gittey commit",
+            "command": "npx rimrafx **/TestResults && npx rimrafx **/coveragereport && cls && dotnet test --collect:\"XPlat Code Coverage\" && reportgenerator -reports:.\\Tests\\TestResults\\**\\coverage.cobertura.xml -targetdir:\"coveragereport\" -reporttypes:Html && gittey commit; start ./coveragereport/index.htm",
             "description": "runs tests and commits if the tests succeed"
         },
         {
@@ -33,7 +33,7 @@
         },
         {
             "name": "setup",
-            "command": "cls;dotnet build",
+            "command": "cls;dotnet build;dotnet tool install -g dotnet-reportgenerator-globaltool",
             "description": "sets the project up to be run"
         }
     ],
