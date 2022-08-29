@@ -51,6 +51,15 @@ namespace Shape.Tests
             Assert.AreEqual("Line Segment", result.SideA.Type);
             Assert.AreEqual("Line Segment", result.SideB.Type);
             Assert.AreEqual("Line Segment", result.SideC.Type);
+            
+            Assert.AreEqual(result.P1, result.SideA.P1);
+            Assert.AreEqual(result.P2, result.SideA.P2);
+            
+            Assert.AreEqual(result.P2, result.SideB.P1);
+            Assert.AreEqual(result.P3, result.SideB.P2);
+            
+            Assert.AreEqual(result.P3, result.SideC.P1);
+            Assert.AreEqual(result.P1, result.SideC.P2);
         
             Assert.AreEqual(3, result.SideA.Length, 0.001);
             Assert.AreEqual(4, result.SideB.Length, 0.001);
@@ -80,6 +89,15 @@ namespace Shape.Tests
             Assert.AreEqual("Line Segment", result.SideA.Type);
             Assert.AreEqual("Line Segment", result.SideB.Type);
             Assert.AreEqual("Line Segment", result.SideC.Type);
+            
+            Assert.AreEqual(result.P1, result.SideA.P1);
+            Assert.AreEqual(result.P2, result.SideA.P2);
+            
+            Assert.AreEqual(result.P2, result.SideB.P1);
+            Assert.AreEqual(result.P3, result.SideB.P2);
+            
+            Assert.AreEqual(result.P3, result.SideC.P1);
+            Assert.AreEqual(result.P1, result.SideC.P2);
         
             Assert.AreEqual(12, result.SideA.Length, 0.001);
             Assert.AreEqual(16, result.SideB.Length, 0.001);
@@ -103,12 +121,47 @@ namespace Shape.Tests
                 (4, 3),
                 (0, 0)
             );
-        
+            
             var result = Classifier.Classify(points);
             
             Assert.AreEqual(36.87, result.AngleA.Degrees, 0.001);
+            Assert.AreEqual(result.P2, result.AngleA.P1, "AngleA P1");
+            Assert.AreEqual(result.P3, result.AngleA.Vertex, "AngleA Vertex");
+            Assert.AreEqual(result.P1, result.AngleA.P2, "AngleA P2");
+            
+            Assert.AreEqual(result.SideB.P1, result.AngleA.SideA.P1, "AngleA SideA P1");
+            Assert.AreEqual(result.SideB.P2, result.AngleA.SideA.P2, "AngleA SideA P2");
+            Assert.AreEqual(result.SideB.Length, result.AngleA.SideA.Length, "AngleA SideA Length");
+            
+            Assert.AreEqual(result.SideC.P2, result.AngleA.SideB.P1, "AngleA SideB P1");
+            Assert.AreEqual(result.SideC.P1, result.AngleA.SideB.P2, "AngleA SideB P2");
+            Assert.AreEqual(result.SideC.Length, result.AngleA.SideB.Length, "AngleA SideB Length");
+
             Assert.AreEqual(53.13, result.AngleB.Degrees, 0.001);
+            Assert.AreEqual(result.P3, result.AngleB.P1, "AngleB P1");
+            Assert.AreEqual(result.P1, result.AngleB.Vertex, "AngeleB Vertex");
+            Assert.AreEqual(result.P2, result.AngleB.P2, "AngleB P2");
+            
+            Assert.AreEqual(result.SideC.P1, result.AngleB.SideA.P1, "AngleB SideA P1");
+            Assert.AreEqual(result.SideC.P2, result.AngleB.SideA.P2, "AngleB SideA P2");
+            Assert.AreEqual(result.SideC.Length, result.AngleB.SideA.Length, "AngleA SideA Length");
+            
+            Assert.AreEqual(result.SideA.P2, result.AngleB.SideB.P1, "AngleB SideA P1");
+            Assert.AreEqual(result.SideA.P1, result.AngleB.SideB.P2, "AngleB SideA P2");
+            Assert.AreEqual(result.SideA.Length, result.AngleB.SideB.Length, "AngleA SideA Length");
+            
             Assert.AreEqual(90, result.AngleC.Degrees, 0.001);
+            Assert.AreEqual(result.P1, result.AngleC.P1, "AngleC P1");
+            Assert.AreEqual(result.P2, result.AngleC.Vertex, "AngleC Vertex");
+            Assert.AreEqual(result.P3, result.AngleC.P2, "AngleC P2");
+            
+            Assert.AreEqual(result.SideA.P1, result.AngleC.SideA.P1, "AngleC SideA P1");
+            Assert.AreEqual(result.SideA.P2, result.AngleC.SideA.P2, "AngleC SideA P2");
+            Assert.AreEqual(result.SideA.Length, result.AngleC.SideA.Length, "AngleC SideA Length");
+            
+            Assert.AreEqual(result.SideB.P2, result.AngleC.SideB.P1, "AngleC SideB P1");
+            Assert.AreEqual(result.SideB.P1, result.AngleC.SideB.P2, "AngleC SideB P2");
+            Assert.AreEqual(result.SideB.Length, result.AngleC.SideB.Length, "AngleA SideA Length");
         }
 
         [TestMethod]
